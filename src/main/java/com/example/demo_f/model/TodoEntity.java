@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo_f.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -22,7 +22,7 @@ public class TodoEntity {
 @GeneratedValue(generator="system-uuid")
 @GenericGenerator(name="system-uuid",strategy="uuid")
 private String id;
-private String Userid;
+private String userId;
 private String title;
 private boolean done;
 }
