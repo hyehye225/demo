@@ -29,6 +29,22 @@ public class TestController {
 		ResponseDTO<String> response=ResponseDTO.<String>builder().data(list).build();
 		return response;
 	}
+	@GetMapping("/testResponseEntityOk") 
+	public ResponseDTO<String>testControllerResponseEntityOk() {
+		List<String> list =new ArrayList<String>();
+		list.add("Hello World! I'm ResponseEntity. And you get 200!");
+		list.add("See you!");
+		ResponseDTO<String> response=ResponseDTO.<String>builder().data(list).build();
+		return response;
+	}
+	@GetMapping("/testResponseEntityBad") 
+	public ResponseDTO<String>testControllerResponseEntityBad() {
+		List<String> list =new ArrayList<String>();
+		list.add("Hello World! I'm ResponseEntity. And you get 400!");
+		list.add("See you!");
+		ResponseDTO<String> response=ResponseDTO.<String>builder().data(list).build();
+		return response;
+	}
 //	@GetMapping("/{id}")
 //	public String testControlllerWithPathVariables(@PathVariable(required=false) int id) {
 //		return "Hello World! ID "+ id;
