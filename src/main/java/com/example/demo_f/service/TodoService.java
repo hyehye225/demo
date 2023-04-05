@@ -15,7 +15,7 @@ public class TodoService {
 public String testService() {
 	TodoEntity entity=TodoEntity.builder().userId("user01").title("My first todo item").build();
 	repository.save(entity);
-	TodoEntity savedEntity=repository.findByUserId(entity.getUserId()).get(0);
+	TodoEntity savedEntity=repository.searchByUserId(entity.getUserId()).get(0);
 	
 	return savedEntity.getUserId();
 }
